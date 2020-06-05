@@ -7,11 +7,14 @@ public class SleepAndInterrupt {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
 //                    e.printStackTrace();
-                    System.out.println("当前睡眠进入中断执行 保存状态并退出循环");
-                    break;
+                    //sleep 被中断会抛出中断异常 并且清除中断标志
+//                    System.out.println("当前睡眠进入中断执行 保存状态并退出循环");
+//                    break;
+                    //如果无需保存数据现场可以直接退出如果需要 则可以再次进行中断标志
+                    Thread.currentThread().interrupt();
                 }
                 if (Thread.currentThread().isInterrupted()) {
-                    System.out.println("当前进入中断执行 保存状态并退出循环");
+                    System.out.println("当前线程进入中断执行 保存状态并退出循环");
                     break;
                 }
             }
