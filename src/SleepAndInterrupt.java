@@ -1,4 +1,8 @@
+/**
+ * 章节 2.2.3 线程中断
+ */
 public class SleepAndInterrupt {
+
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
             while (true) {
