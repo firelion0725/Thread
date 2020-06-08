@@ -1,5 +1,5 @@
 /**
- * 2.2.4 章节 等待和通知
+ * 章节 2.2.4  等待和通知
  */
 public class WaitAndNotify {
     final static Object lock = new Object();
