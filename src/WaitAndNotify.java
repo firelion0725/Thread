@@ -44,7 +44,6 @@ public class WaitAndNotify {
                 e.printStackTrace();
             }
             synchronized (lock){
-
                 lock.notify();
                 System.out.println("T2线程执行结束");
             }
